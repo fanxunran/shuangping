@@ -1,0 +1,53 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+
+html,body{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
+.container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:url(../img/bg2.jpg) no-repeat;
+	background-size: 100% 100%;
+	z-index: 1;
+	overflow:hidden;
+
+}
+.content{
+	position: relative;
+    width: 100%;
+    height: 100%;
+}
+.car_right{
+    width: 50%;
+    position: absolute;
+    /* margin-top: 114%; */
+    bottom: 9%;
+    display:none;
+    /*left:-50%;*/
+    opacity:0;
+}
+.moveleft{
+    animation:swing 9s linear 1 5s;
+	-webkit-animation:swing 9s linear 1 5s;
+	-webkit-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+}
+@keyframes swing {
+
+	0%{opacity:1;  transform: translate3d(-100%,0,0); }
+  	100% {opacity:1;  transform: translate3d(200%,0,0); } 
+}
+@-webkit-keyframes swing { 
+
+	0%{opacity:1;  -webkit-transform: translate3d(-100%,0,0);}
+  	100% {opacity:1;  -webkit-transform: translate3d(200%,0,0); } 
+}
